@@ -18,5 +18,5 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # git clone -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
 rm -rf package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/lean/luci-theme-argon
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git /package/lean/luci-app-jd-dailybonus
+git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/luci-app-argon-config package/lean/luci-app-argon-config
