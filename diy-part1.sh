@@ -21,7 +21,7 @@ sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.4/g' target/linux/x86/Makefil
 rm -rf package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
 git clone https://github.com/yaof2/luci-app-ikoolproxy.git package/lean/uci-app-ikoolproxy
-git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/lean/luci-app-unblockneteasemusic
+#git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/lean/luci-app-unblockneteasemusic
 
 #sed -i '$a src-git helloworld https://github.com/Mattraks/helloworld.git' feeds.conf.default
 #sed -i '$a src-git nas https://github.com/linkease/nas-packages.git;master' feeds.conf.default
