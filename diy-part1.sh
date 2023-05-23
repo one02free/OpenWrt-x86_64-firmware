@@ -25,5 +25,3 @@ git clone https://github.com/yaof2/luci-app-ikoolproxy.git package/lean/uci-app-
 git clone -b master https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/lean/luci-app-unblockneteasemusic
 
 #sed -i '$a src-git helloworld https://github.com/Mattraks/helloworld.git' feeds.conf.default
-#sed -i '$a src-git nas https://github.com/linkease/nas-packages.git;master' feeds.conf.default
-#sed -i 's/KERNEL_TESTING_PATCHVER:=6.1/KERNEL_TESTING_PATCHVER:=5.4/g' target/linux/x86/Makefile
