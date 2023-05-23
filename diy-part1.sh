@@ -15,6 +15,7 @@
 
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+#sed -i '$a src-git helloworld https://github.com/Mattraks/helloworld.git' feeds.conf.default
 
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld.git' feeds.conf.default
 sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=5.4/g' target/linux/x86/Makefile
@@ -23,5 +24,3 @@ rm -rf package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/je
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
 git clone https://github.com/yaof2/luci-app-ikoolproxy.git package/lean/uci-app-ikoolproxy
 git clone -b master https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git package/lean/luci-app-unblockneteasemusic
-
-#sed -i '$a src-git helloworld https://github.com/Mattraks/helloworld.git' feeds.conf.default
