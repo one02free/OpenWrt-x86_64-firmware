@@ -18,8 +18,8 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-  schedule:
-    - cron: 0 13 * * ?
+#  schedule:
+#    - cron: 0 13 * * ?
       
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -63,11 +63,11 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
-    - name: Cache
-      uses: klever1988/cachewrtbuild@main
-      with:
-        ccache: 'true'
-        prefix: ${{ github.workspace }}/openwrt
+#    - name: Cache
+#      uses: klever1988/cachewrtbuild@main
+#      with:
+#        ccache: 'true'
+#        prefix: ${{ github.workspace }}/openwrt
 
     - name: Load custom feeds
       run: |
