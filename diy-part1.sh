@@ -18,9 +18,11 @@
 #sed -i '$a src-git helloworld https://github.com/Mattraks/helloworld.git' feeds.conf.default
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld.git' feeds.conf.default
 
-sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=5.4/g' target/linux/x86/Makefile
-sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.4/g' target/linux/x86/Makefile
+#sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=5.4/g' target/linux/x86/Makefile
+#sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.4/g' target/linux/x86/Makefile
 #git clone -b main https://github.com/fw876/helloworld.git package/lean/helloworld
+git clone -b istoreos-22.03 https://github.com/istoreos/istoreos.git istoreos
+rm -rf package/libs/openssl && mv istoreos/package/libs/openssl package/libs/openssl
 rm -rf package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
 git clone https://github.com/yaof2/luci-app-ikoolproxy.git package/lean/uci-app-ikoolproxy
