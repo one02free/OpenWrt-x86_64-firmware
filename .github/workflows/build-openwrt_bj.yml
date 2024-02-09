@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build Openwrt_BJ
+name: Build Openwrt_bj
 
 on:
   repository_dispatch:
