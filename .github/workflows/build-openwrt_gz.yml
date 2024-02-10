@@ -1,4 +1,4 @@
-#
+# 
 # Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
 #
 # This is free software, licensed under the MIT License.
@@ -18,9 +18,9 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-  schedule:
-    - cron: 0 13 * * ?
-      
+#  schedule:
+#    - cron: 0 13 * * ?
+    
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
@@ -29,10 +29,10 @@ env:
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
-  UPLOAD_FIRMWARE: false
+  UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
-  UPLOAD_RELEASE: true
+  UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
 
 jobs:
@@ -198,7 +198,7 @@ jobs:
         files: ${{ env.FIRMWARE }}/*
 
     - name: Delete workflow runs
-      uses: Mattraks/delete-workflow-runs@main
+      uses: GitRML/delete-workflow-runs@main
       with:
         retain_days: 7
         keep_minimum_runs: 7
@@ -207,7 +207,7 @@ jobs:
       uses: dev-drprasad/delete-older-releases@v0.1.0
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
-        keep_latest: 7
+        keep_latest: 3
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
