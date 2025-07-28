@@ -13,10 +13,10 @@
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
+sudo apt install --reinstall zlib1g-dev libelf-dev perl
 # Add a feed source
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 rm -rf package/lean/luci-theme-argon && git clone https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
-sudo apt install --reinstall libelf-dev zlib1g-dev
 #git clone -b main https://github.com/ilxp/luci-app-ikoolproxy.git package/lean/uci-app-ikoolproxy
