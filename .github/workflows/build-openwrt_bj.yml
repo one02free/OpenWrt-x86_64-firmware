@@ -91,10 +91,10 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
-    - name: Patch sing-box Makefile
-      run: |
-        sed -i 's/with_ech,//g' /workdir/openwrt/feeds/packages/net/sing-box/Makefile
-        sed -i 's/,with_ech//g' /workdir/openwrt/feeds/packages/net/sing-box/Makefile
+#    - name: Patch sing-box Makefile
+#      run: |
+#        sed -i 's/with_ech,//g' /workdir/openwrt/feeds/packages/net/sing-box/Makefile
+#        sed -i 's/,with_ech//g' /workdir/openwrt/feeds/packages/net/sing-box/Makefile
 
     - name: Load custom configuration
       run: |
